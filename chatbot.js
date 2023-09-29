@@ -2,15 +2,11 @@
 // import path from "path";
 // import { LlamaModel, LlamaContext, LlamaChatSession } from "node-llama-cpp";
 
-
-const { fileURLToPath } = require("url");
 const path = require("path");
 const { LlamaModel, LlamaContext, LlamaChatSession } = require("node-llama-cpp");
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
 const model = new LlamaModel({
-  modelPath: path.join(__dirname, "models", "codellama-13b.Q3_K_M.gguf")
+  modelPath: path.join("/home/llm/llama.cpp/models/llama-2-7b-chat/", "ggml-model-q4_0.gguf")
 });
 const context = new LlamaContext({ model });
 const session = new LlamaChatSession({ context });
