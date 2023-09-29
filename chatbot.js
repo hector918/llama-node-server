@@ -1,9 +1,9 @@
 // import { fileURLToPath } from "url";
 // import path from "path";
-// import { LlamaModel, LlamaContext, LlamaChatSession } from "node-llama-cpp";
+import { LlamaModel, LlamaContext, LlamaChatSession } from "node-llama-cpp";
 
 const path = require("path");
-const { LlamaModel, LlamaContext, LlamaChatSession } = require("node-llama-cpp");
+// const { LlamaModel, LlamaContext, LlamaChatSession } = require("node-llama-cpp");
 
 const model = new LlamaModel({
   modelPath: path.join("/home/llm/llama.cpp/models/llama-2-7b-chat/", "ggml-model-q4_0.gguf")
